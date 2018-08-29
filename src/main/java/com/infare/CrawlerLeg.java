@@ -158,10 +158,10 @@ public class CrawlerLeg {
             String price = driver.findElement(By.cssSelector("td.totalfarecell:nth-child(2)")).getText().substring(1);
             String taxes = driver.findElement(By.cssSelector("div.selectioncontainer:nth-child(1) > div:nth-child(1) > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(15) > td:nth-child(2)")).getText().substring(1);
             Thread.sleep(2000);
-                String depAirport = driver.findElement(By.cssSelector("tr.evenrow:nth-child(4) > td:nth-child(1) > div:nth-child(1)")).getText();
-                String arrAirport = driver.findElement(By.cssSelector("tr.evenrow:nth-child(4) > td:nth-child(2) > div:nth-child(1)")).getText();
-                String depTime = driver.findElement(By.cssSelector("tr.evenrow:nth-child(3)>td:nth-child(1)>div:nth-child(1)")).getText();
-                String arrTime = driver.findElement(By.cssSelector("tr.evenrow:nth-child(3)>td:nth-child(2)>div:nth-child(1)")).getText();
+                String depAirport = driver.findElement(By.cssSelector("tr.evenrow:nth-child(5) > td:nth-child(1) > div:nth-child(1)")).getText();
+                String arrAirport = driver.findElement(By.cssSelector("tr.evenrow:nth-child(5) > td:nth-child(2) > div:nth-child(1)")).getText();
+                String depTime = driver.findElement(By.cssSelector("tr.evenrow:nth-child(4)>td:nth-child(1)>div:nth-child(1)")).getText();
+                String arrTime = driver.findElement(By.cssSelector("tr.evenrow:nth-child(4)>td:nth-child(2)>div:nth-child(1)")).getText();
                 try {
                     flightInfoDB.fillFareData(id, date, depAirport, arrAirport, depTime, arrTime, price, taxes);
                 } catch (SQLException e) {
